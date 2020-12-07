@@ -22,11 +22,11 @@ public class StreamExample3 {
 						return Arrays.stream(t.split(" "));// 배열을 stream 형태로
 					}
 				}).filter(s -> s.startsWith("s"))//
-				.forEach(s -> System.out.println(s));
+				.forEach(s -> System.out.println(s));//출력1
 
 		strList.stream()//
 				.map((t) -> t.toUpperCase())//
-				.forEach(s -> System.out.println(s));
+				.forEach(s -> System.out.println(s));//출력2
 		// map은 리턴 타입만 정해주면 알아서 Stream을 만들어줌
 
 		List<Student> students = Arrays.asList(new Student("송다희", "F", 80), new Student("윤태현", "M", 75),
@@ -35,7 +35,7 @@ public class StreamExample3 {
 		double avg = students.stream()//
 				.mapToInt(a -> a.getScore())//
 				.average().getAsDouble();
-		System.out.println(avg);
+		System.out.println(avg);//출력4
 
 	}// end of main
 }// end of class

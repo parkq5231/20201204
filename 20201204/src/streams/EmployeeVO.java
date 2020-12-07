@@ -9,6 +9,7 @@ public class EmployeeVO {
 	private String hireDate;
 	private String jobId;
 	private int salary;
+	private int deptId;
 
 	// constructor
 	public EmployeeVO() {
@@ -87,8 +88,17 @@ public class EmployeeVO {
 		this.salary = salary;
 	}
 
+	public int getDeptId() {
+		return deptId;
+	}
+
+	public void setDeptId(int deptId) {
+		this.deptId = deptId;
+	}
+
 	public void showEmpInfo() {
-		System.out.println("사원번호: " + employeeId + ", firstName: " + firstName + ", lastName: " + lastName);
+		System.out.println("사원번호: " + employeeId + ", firstName: " + firstName + ", lastName: " + lastName//
+				+ ", 월급: " + salary + ", 부서번호: " + deptId);
 	}
 
 }// end of class
